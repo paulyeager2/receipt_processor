@@ -1,0 +1,282 @@
+Started GET "/receipts/process" for ::1 at 2024-10-08 13:31:53 +0330
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/receipts/process"):
+  
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:32:57 +0330
+  
+AbstractController::ActionNotFound (The action 'process' could not be found for ReceiptsController):
+  
+actionpack (7.2.1) lib/abstract_controller/base.rb:158:in `process'
+actionpack (7.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1) lib/action_dispatch/routing/route_set.rb:896:in `call'
+rack (3.1.7) lib/rack/etag.rb:29:in `call'
+rack (3.1.7) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.7) lib/rack/head.rb:15:in `call'
+activerecord (7.2.1) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.7) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.7) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (7.2.1) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:33:10 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"url"=>"https://www.alza.cz/aeg-7000-prosteam-lfr73964cc-d7635493.htm", "fields"=>{"meta"=>["keywords", "twitter:image"]}, "receipt"=>{"url"=>"https://www.alza.cz/aeg-7000-prosteam-lfr73964cc-d7635493.htm", "fields"=>{"meta"=>["keywords", "twitter:image"]}}}
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 2.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:41:41 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `strip' for nil:NilClass):
+  
+app/controllers/receipts_controller.rb:26:in `block in calculate_points'
+app/controllers/receipts_controller.rb:25:in `each'
+app/controllers/receipts_controller.rb:25:in `calculate_points'
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:42:03 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `day' for "2022-01-01":String):
+  
+app/controllers/receipts_controller.rb:28:in `calculate_points'
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:43:54 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `hour' for "2022-01-01":String):
+  
+app/controllers/receipts_controller.rb:37:in `calculate_points'
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:44:43 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (can't dump IO):
+  
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:45:43 +0330
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (can't dump IO):
+  
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:45:56 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (can't dump IO):
+  
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:48:52 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 201 Created in 2ms (Views: 1.0ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/722dc59f-15b5-44d9-a111-8906e73d5500/points" for ::1 at 2024-10-08 13:49:19 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"722dc59f-15b5-44d9-a111-8906e73d5500"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 13:54:48 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00", "receipt"=>{"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00"}}
+Completed 201 Created in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/2aa06b27-01e1-476b-9c2f-78de6e1bbb17/points" for ::1 at 2024-10-08 13:55:07 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"2aa06b27-01e1-476b-9c2f-78de6e1bbb17"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:08:39 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00", "receipt"=>{"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `r' for #<ReceiptsController:0x0000000000ef10>):
+  
+app/controllers/receipts_controller.rb:31:in `calculate_points'
+app/controllers/receipts_controller.rb:4:in `create'
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:09:23 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00", "receipt"=>{"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00"}}
+Completed 201 Created in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:09:34 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:11:55 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:13:59 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:15:02 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:15:06 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:15:10 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff/points" for ::1 at 2024-10-08 14:15:22 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"67bd5269-f53f-4ffe-a2b6-1ba67ed7c3ff"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:15:36 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00", "receipt"=>{"retailer"=>"M&M Corner Market", "purchaseDate"=>"2022-03-20", "purchaseTime"=>"14:33", "items"=>[{"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}, {"shortDescription"=>"Gatorade", "price"=>"2.25"}], "total"=>"9.00"}}
+Completed 201 Created in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/receipts/914e8d99-7598-4e0c-b5a5-399635ef6037/points" for ::1 at 2024-10-08 14:15:49 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"914e8d99-7598-4e0c-b5a5-399635ef6037"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:16:07 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 201 Created in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/b5e9a706-d732-48d8-89da-c66c2972653e/points" for ::1 at 2024-10-08 14:16:19 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"b5e9a706-d732-48d8-89da-c66c2972653e"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/b5e9a706-d732-48d8-89da-c66c2972653/points" for ::1 at 2024-10-08 14:17:43 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"b5e9a706-d732-48d8-89da-c66c2972653"}
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/b5e9a706-d732-48d8-89da-c66c2972653/points" for ::1 at 2024-10-08 14:19:13 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"b5e9a706-d732-48d8-89da-c66c2972653"}
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/b5e9a706-d732-48d8-89da-c66c2972653e/points" for ::1 at 2024-10-08 14:19:18 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"b5e9a706-d732-48d8-89da-c66c2972653e"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:19:20 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 201 Created in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/dfe6d9ee-1548-41b8-8261-bfec82ce47b0/points" for ::1 at 2024-10-08 14:19:31 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"dfe6d9ee-1548-41b8-8261-bfec82ce47b0"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/dfe6d9ee-1548-41b8-8261-bfec82ce47b0/points" for ::1 at 2024-10-08 14:21:01 +0330
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"dfe6d9ee-1548-41b8-8261-bfec82ce47b0"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/receipts/dfe6d9ee-1548-41b8-8261-bfec82ce47b0/points" for ::1 at 2024-10-08 14:22:41 +0330
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReceiptsController#points as */*
+  Parameters: {"id"=>"dfe6d9ee-1548-41b8-8261-bfec82ce47b0"}
+Completed 404 Not Found in 11ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started POST "/receipts/process" for ::1 at 2024-10-08 14:22:46 +0330
+Processing by ReceiptsController#create as */*
+  Parameters: {"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35", "receipt"=>{"retailer"=>"Target", "purchaseDate"=>"2022-01-01", "purchaseTime"=>"13:01", "items"=>[{"shortDescription"=>"Mountain Dew 12PK", "price"=>"6.49"}, {"shortDescription"=>"Emils Cheese Pizza", "price"=>"12.25"}, {"shortDescription"=>"Knorr Creamy Chicken", "price"=>"1.26"}, {"shortDescription"=>"Doritos Nacho Cheese", "price"=>"3.35"}, {"shortDescription"=>"   Klarbrunn 12-PK 12 FL OZ  ", "price"=>"12.00"}], "total"=>"35.35"}}
+Completed 201 Created in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

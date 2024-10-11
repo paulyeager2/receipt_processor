@@ -25,6 +25,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
-
-RUN bundle exec rails dev:cache
+CMD ["bash", "-c", "rails server -b 0.0.0.0 && rails dev:cache"]
